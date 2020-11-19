@@ -110,4 +110,11 @@ RCT_EXPORT_METHOD(clearAll:(RCTPromiseResolveBlock)resolve
     [self clearMultiple:keys resolve:resolve reject:reject];
 }
 
+
+RCT_EXPORT_METHOD(synchronize:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+    [[self getDefaultUser] synchronize];
+}
+
 @end
